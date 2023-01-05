@@ -1,0 +1,145 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+
+  body{
+    font-family: 'Seymour One', sans-serif;
+    background-color: black;
+    color: green;
+    width: 100%;
+  }
+  
+  header{
+    font-weight: bold;
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+ }
+
+ .logo{
+    margin: 20px 5px 10px 20px;
+    padding: auto;
+}
+
+h1{
+    text-align: center;
+    padding: auto;
+    margin: 20px 5px 10px 40px;
+    display: inline-block;
+ }
+
+ #mensaje{
+    position: relative;
+    margin: 0% 0% 1% 15%;
+    padding: 1% 4% 1% 4%;
+    width: 20%;
+    font-family: 'Seymour One', sans-serif;
+    font-size: auto;
+    border-radius: 25px;
+    border-color: green;
+    background: none;
+}
+
+.parrafo{
+    font-size: 10px;
+    margin: 5px;
+}
+
+#resultado{
+    position: absolute; 
+        right: 200px; top: 90px;
+    padding: 1% 4% 1% 4%;
+    width: 20%;
+    font-family: 'Seymour One', sans-serif;
+    font-size: auto;
+    background: none;
+    border-radius: 25px;
+    border-color: green;
+    float: right;
+    margin-top: 1%;
+    margin-left: 5%;
+ 
+}
+.tarjeta2 {
+    display: flex;
+    flex-direction: column;  
+}
+
+#encriptar, #desencriptar{
+    font-size: 20px;
+    border-radius: 24px;
+    display: inline;
+    font-weight: bold;
+    color: green;
+    border-color: green;
+    background-color: lightgreen;
+    border-width: 5px;
+    letter-spacing: 3px;
+    font-family: 'Seymour One', sans-serif;
+    padding: auto;
+    margin: auto;
+}
+
+#copiar{
+font-size: 20px;
+border-radius: 24px;
+font-weight: bold;
+color: green;
+border-color: green;
+background-color: lightgreen;
+border-width: 5px;
+letter-spacing: 3px;
+font-family: 'Seymour One', sans-serif;
+padding: auto;
+margin: auto;
+}
+
+
+
+ footer{
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    font-size: 13px;
+    margin: 20px;
+    position: absolute;
+}
+
+@media screen and (max-width:480px){
+    body { 
+        width: auto;
+    }
+    #ingreseTexto{
+        position: top;
+        margin: auto;
+        padding: auto;
+        width: 100%;
+    }
+
+    #resultado{
+        position: bottom;
+        margin: auto;
+        padding: auto;
+        width: 100%;
+    }
+    
+    #encriptar, #desencriptar{
+        display: flex;
+        margin:auto;
+    }
+    
+
+}
+
+@media screen and (min-width:481px) and (max-width:1024px){
+    body { 
+        width: auto;
+    }
+    #encriptar, #desencriptar{
+        
+        display: flex;
+        margin:auto;
+    }
+    
+}
