@@ -16,7 +16,7 @@
     padding: auto;
 }
 
-h1{
+.titulo{
     text-align: center;
     padding: auto;
     margin: 20px 5px 10px 40px;
@@ -25,7 +25,7 @@ h1{
     font-size: 40px;
 }
 
- #mensaje{
+#mensaje{
     position: relative;
     margin: 0% 0% 1% 15%;
     padding: 1% 4% 1% 4%;
@@ -43,9 +43,29 @@ h1{
     margin: 5px;
 }
 
+#encriptar, #desencriptar{
+    font-size: 20px;
+    border-radius: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+    border-color: green;
+    background-color: lightgreen;
+    border-width: 5px;
+    letter-spacing: 3px;
+    font-family: 'Seymour One', sans-serif;
+    width: 15em;
+    display: inline-block;
+    }
+
+.num2 {
+    display: flex;
+    flex-direction: column;  
+}
+
 #resultado{
     position: absolute; 
-        right: 200px; top: 90px;
+        right: 300px; top: 87px;
     padding: 1% 4% 1% 4%;
     width: 20%;
     font-family: 'Seymour One', sans-serif;
@@ -58,65 +78,28 @@ h1{
     margin-left: 5%;
  
 }
-.num2 {
-    display: flex;
-    flex-direction: column;  
-}
-
-#encriptar{
-    font-size: 20px;
-    border-radius: 24px;
-    font-weight: bold;
-    text-align: center;
-    color: green;
-    border-color: green;
-    background-color: lightgreen;
-    border-width: 5px;
-    letter-spacing: 3px;
-    font-family: 'Seymour One', sans-serif;
-    width: 15em;
-    display:flex;
-}
-
-#desencriptar{
-    font-size: 20px;
-    border-radius: 24px;
-    font-weight: bold;
-    text-align: center;
-    color: green;
-    border-color: green;
-    background-color: lightgreen;
-    border-width: 5px;
-    letter-spacing: 3px;
-    font-family: 'Seymour One', sans-serif;
-    width: 15em;
-    display:flex;
-}
 
 #copiar{
-font-size: 20px;
-border-radius: 24px;
-font-weight: bold;
-text-align: center;
-color: green;
-border-color: green;
-background-color: lightgreen;
-border-width: 5px;
-letter-spacing: 3px;
-font-family: 'Seymour One', sans-serif;
-width: 15em;
-display:flex;
-position:absolute;
-    right:220px;
+    font-size: 20px;
+    border-radius: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+    border-color: green;
+    background-color: lightgreen;
+    border-width: 5px;
+    letter-spacing: 3px;
+    font-family: 'Seymour One', sans-serif;
+    width: 15em;
+    position:absolute;
+        right:320px; top: 250px;
 }
 
  footer{
-    width: 100%;
     text-align: center;
     padding: 40px;
     font-size: 13px;
     margin: 20px;
-    position: absolute;
 }
 
 @media screen and (max-width:480px){
