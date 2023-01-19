@@ -103,39 +103,142 @@
 }
 
 @media screen and (max-width:480px){
-    body { 
-        width: auto;
-    }
-    #ingreseTexto{
-        position: top;
-        margin: auto;
-        padding: auto;
+   
+    body{
         width: 100%;
-    }
-
-    #resultado{
-        position: bottom;
-        margin: auto;
+      }
+      
+      
+     .logo{
+        margin: left;
         padding: auto;
-        width: 100%;
+    }
+    
+    .titulo{
+        text-align: center;
+        padding: auto;
+        margin: auto;
+        display: flex;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    #mensaje{
+        position:center;
+        margin: auto;
+        padding:auto;
+        width: 80%;
+        font-size: auto;
+    }
+    
+    .parrafo{
+        font-size: 10px;
+        margin: 5px;
     }
     
     #encriptar, #desencriptar{
+        margin: 10px;
+        font-size: auto;
+        display: block;
+        }
+    
+    .num2 {
         display: flex;
-        margin:auto;
+        flex-direction: column;  
     }
     
-
+    #resultado{
+        position: relative;
+        right:auto; top: auto;
+        margin: auto;
+        padding:auto;
+        width: 80%;
+        font-size: auto; 
+        display: center;      
+    }
+    
+    #copiar{
+        margin: 10px;
+        font-size: auto;
+        display: block;
+        position: relative;
+        right:auto; top: auto;
+    }
+    
+     footer{
+        margin: 20px;
+    }
+    
 }
 
 @media screen and (min-width:481px) and (max-width:1024px){
-    body { 
-        width: auto;
+    body{
+        width: 100%;
+      }
+            
+     .logo{
+        margin: left 10px;
+        padding: auto;
     }
-    #encriptar, #desencriptar{
-        
+    
+    .titulo{
+        text-align: center;
+        padding: auto;
+        margin: auto;
         display: flex;
-        margin:auto;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    
+    #mensaje{
+        position:center;
+        margin: auto;
+        padding:auto;
+        width: 80%;
+        font-size: auto;
+    }
+    
+    .parrafo{
+        font-size: 10px;
+        margin: 5px;
+    }
+    
+    #encriptar, #desencriptar{
+        font-size: auto;
+        display: block;
+        position: relative;
+        right:auto; top: auto;
+        margin: auto;
+        }
+    
+    .num2 {
+        display: flex;
+        flex-direction: column;  
+    }
+    
+    #resultado{
+        position: center;
+        right:auto; top: auto;
+        margin: 50px 0 50px 0;
+        padding:auto;
+        width: 80%;
+        font-size: auto; 
+        display: center;      
+    }
+    
+    #copiar{
+        font-size: auto;
+        display: block;
+        position: relative;
+        right:auto; top: auto;
+        margin: auto;
+    }
+    
+     footer{
+        text-align: center;
+        padding: auto;
+        margin: 90px;
     }
     
 }
+    
