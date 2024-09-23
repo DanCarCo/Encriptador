@@ -1,244 +1,147 @@
-@viewport {
-    width: device-width ;
-    zoom: 1.0 ;
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  body{
+body {
     font-family: 'Seymour One', sans-serif;
     background-color: black;
-    color: green;
-    width: 100%;
-  }
-  
-  
- .logo{
-    margin: 20px 5px 10px 20px;
-    padding: auto;
-}
-
-.titulo{
-    text-align: center;
-    padding: auto;
-    margin: 20px 5px 10px 40px;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 40px;
-}
-
-#mensaje{
-    position: relative;
-    margin: 0% 0% 1% 15%;
-    padding: 1% 4% 1% 4%;
-    width: 20%;
-    font-family: 'Seymour One', sans-serif;
-    font-size: auto;
-    border-radius: 25px;
-    border-color: green;
-    background: none;
-    color: green;
-}
-
-.parrafo{
-    font-size: 10px;
-    margin: 5px;
-}
-
-#encriptar, #desencriptar{
-    font-size: 20px;
-    border-radius: 24px;
-    font-weight: bold;
-    text-align: center;
-    color: green;
-    border-color: green;
-    background-color: lightgreen;
-    border-width: 5px;
-    letter-spacing: 3px;
-    font-family: 'Seymour One', sans-serif;
-    width: 15em;
-    display: inline-block;
-    }
-
-.num2 {
+    color: white;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden; /* Para evitar scrolls */
 }
 
-#resultado{
-    position: absolute; 
-        right: 300px; top: 87px;
-    padding: 1% 4% 1% 4%;
-    width: 20%;
-    font-family: 'Seymour One', sans-serif;
-    font-size: auto;
-    background: none;
-    border-radius: 25px;
-    border-color: green;
-    float: right;
-    margin-top: 1%;
-    margin-left: 5%;
- 
+h1 {
+    margin-bottom: 1.25em; /* 20px */
 }
 
-#copiar{
-    font-size: 20px;
-    border-radius: 24px;
-    font-weight: bold;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.ingreso-texto,
+.resultado-texto {
+    margin: 1.25em 0; /* 20px */
+}
+
+textarea {
+    width: 53em; /* 300px */
+    height: 20em; /* 100px */
+    margin: 0.3125em; /* 5px */
+    padding: 0.625em; /* 10px */
+    border: none;
+    border-radius: 0.3125em; /* 5px */
+    font-size: 1em; /* 16px */
+    background-color: #222;
+    color: #00ff00;
+}
+
+textarea:focus {
+    outline: none;
+    border: 0.125em solid #00ff00; /* 2px */
+}
+
+button {
+    background-color: #00ff00;
+    color: black;
+    border: none;
+    border-radius: 0.3125em; /* 5px */
+    padding: 0.625em 1.25em; /* 10px 20px */
+    margin: 0.3125em; /* 5px */
+    font-size: 1em; /* 16px */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+footer {
+    margin-top: 1.25em; /* 20px */
     text-align: center;
-    color: green;
-    border-color: green;
-    background-color: lightgreen;
-    border-width: 5px;
-    letter-spacing: 3px;
-    font-family: 'Seymour One', sans-serif;
-    width: 15em;
-    position:absolute;
-        right:320px; top: 250px;
 }
 
- footer{
-    text-align: center;
-    padding: 40px;
-    font-size: 13px;
-    margin: 20px;
+#aviso {
+    color: red;
+    margin-top: 0.625em; /* 10px */
 }
 
-@media screen and (max-width:480px){
-   
-    body{
-        width: 100%;
-      }
-      
-      
-     .logo{
-        margin: left;
-        padding: auto;
-    }
-    
-    .titulo{
-        text-align: center;
-        padding: auto;
-        margin: auto;
-        display: flex;
-        font-weight: bold;
-        font-size: 30px;
-    }
-    
-    #mensaje{
-        position:center;
-        margin: auto;
-        padding:auto;
-        width: 80%;
-        font-size: auto;
-    }
-    
-    .parrafo{
-        font-size: 10px;
-        margin: 5px;
-    }
-    
-    #encriptar, #desencriptar{
-        margin: 10px;
-        font-size: auto;
-        display: block;
-        }
-    
-    .num2 {
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #resultado{
-        position: relative;
-        right:auto; top: auto;
-        margin: auto;
-        padding:auto;
-        width: 80%;
-        font-size: auto; 
-        display: center;      
-    }
-    
-    #copiar{
-        margin: 10px;
-        font-size: auto;
-        display: block;
-        position: relative;
-        right:auto; top: auto;
-    }
-    
-     footer{
-        margin: 20px;
-    }
-    
+.parrafo {
+    font-size: 0.7em; /* 14px */
+    margin-top: 0.3125em; /* 5px */
 }
 
-@media screen and (min-width:481px) and (max-width:1024px){
-    body{
-        width: 100%;
-      }
-            
-     .logo{
-        margin: left 10px;
-        padding: auto;
-    }
-    
-    .titulo{
-        text-align: center;
-        padding: auto;
-        margin: auto;
-        display: flex;
-        font-weight: bold;
-        font-size: 30px;
-    }
-    
-    #mensaje{
-        position:center;
-        margin: auto;
-        padding:auto;
-        width: 80%;
-        font-size: auto;
-    }
-    
-    .parrafo{
-        font-size: 10px;
-        margin: 5px;
-    }
-    
-    #encriptar, #desencriptar{
-        font-size: auto;
-        display: block;
-        position: relative;
-        right:auto; top: auto;
-        margin: auto;
-        }
-    
-    .num2 {
-        display: flex;
-        flex-direction: column;  
-    }
-    
-    #resultado{
-        position: center;
-        right:auto; top: auto;
-        margin: 50px 0 50px 0;
-        padding:auto;
-        width: 80%;
-        font-size: auto; 
-        display: center;      
-    }
-    
-    #copiar{
-        font-size: auto;
-        display: block;
-        position: relative;
-        right:auto; top: auto;
-        margin: auto;
-    }
-    
-     footer{
-        text-align: center;
-        padding: auto;
-        margin: 90px;
-    }
-    
+/* Estilos de los botones en la sección de ingreso-texto */
+.ingreso-texto {
+    display: flex;
+    flex-direction: column; /* Para alinear el textarea y el párrafo en columna */
+    align-items: center; /* Centrar el contenido */
 }
-    
+
+.ingreso-texto .botones {
+    display: flex; /* Flexbox para botones uno al lado del otro */
+    justify-content: space-between; /* Espaciado entre los botones */
+    width: 100%; /* Ancho total para los botones */
+}
+
+.ingreso-texto button {
+    flex: 1; /* Para que ambos botones ocupen el mismo espacio */
+    margin: 0.3125em; /* 5px */
+}
+
+/* Estilos de los botones en la sección de resultado-texto */
+.resultado-texto button {
+    display: block; /* Hace que el botón ocupe una línea completa */
+    width: 100%; /* Opcional: para que el botón sea del mismo ancho que el textarea */
+    margin-top: 0.625em; /* 10px */
+}
+
+/* Estilos para enlaces de redes sociales */
+.social-links {
+    margin-top: 1em; /* Espacio superior */
+}
+
+.social-links a {
+    margin: 0 0.3125em; /* 5px */
+    display: inline-block; /* Para que los enlaces se alineen correctamente */
+}
+
+.social-icon {
+    width: 2em; /* Ancho del icono */
+    height: 2em; /* Altura del icono */
+    vertical-align: middle; /* Alineación vertical con el texto */
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .ingreso-texto,
+    .resultado-texto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    textarea {
+        width: 90%;
+    }
+}
+
+
+
+
+

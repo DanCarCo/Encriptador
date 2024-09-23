@@ -1,61 +1,93 @@
-const inputMensaje = document.querySelector("#mensaje");
-const inputResultado = document.querySelector("#resultado");
-const btnEncriptar = document.querySelector("#encriptar");
-const btnDesencriptar = document.querySelector("#desencriptar");
-const btnCopiar = document.querySelector("#copiar");
-const tarjeta1 = document.querySelector(".num1");
+// Función para limpiar el texto: convertir a minúsculas y eliminar caracteres especiales
+function limpiarTexto(texto) {
+    const textoLimpio = texto
+        .normalize("NFD") // Normaliza el texto
+        .replace(/[\u0300-\u036f]/g, '') // Elimina los acentos
+        .toLowerCase() // Convierte a minúsculas
+        .replace(/[^a-z\s]/g, ''); // Eliminar caracteres no permitidos
+    return textoLimpio;
+}
 
-function validarMensaje () {
-    let erroresPrevios = tarjeta1.querySelectorAll(".error");
-    for (let err of erroresPrevios) {
-        tarjeta1.removeChild(err);
+// Función para encriptar (primera capa)
+function encriptarTexto(texto) {
+    return texto
+        .replace(/e/g, 'enter')
+        .replace(/i/g, 'imes')
+        .replace(/a/g, 'ai')
+        .replace(/o/g, 'ober')
+        .replace(/u/g, 'ufat');
+}
+
+// Función para aplicar la segunda capa de encriptación (consonantes)
+function encriptarConsonantes(texto) {
+    return texto.replace(/[b-df-hj-np-tv-z]/g, (c) => {
+        const charCode = c.charCodeAt(0);
+        return String.fromCharCode(charCode + 2);
+    });
+}
+
+// Función para desencriptar (primera capa)
+function desencriptarTexto(texto) {
+    return texto
+        .replace(/enter/g, 'e')
+        .replace(/imes/g, 'i')
+        .replace(/ai/g, 'a')
+        .replace(/ober/g, 'o')
+        .replace(/ufat/g, 'u');
+}
+
+// Función para revertir la segunda capa de desencriptación
+function desencriptarConsonantes(texto) {
+    return texto.replace(/[d-fh-npr-xz]/g, (c) => {
+        const charCode = c.charCodeAt(0);
+        return String.fromCharCode(charCode - 2);
+    });
+}
+
+// Función para copiar al portapapeles
+function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto).then(() => {
+        alert("Texto copiado");
+    });
+}
+
+// Evento de encriptar
+document.getElementById("encriptar").addEventListener("click", () => {
+    const mensaje = document.getElementById("mensaje").value.trim();
+    const textoLimpio = limpiarTexto(mensaje);
+
+    // Mensaje de advertencia
+    if (mensaje !== textoLimpio) {
+        alert("Solo letras minúsculas, sin acentos y sin caracteres especiales");
     }
-    let mensaje = inputMensaje.value;
-    let letrasValidas = "abcdefghijklmnopqrstuvwxyz ";
-    let mensajeError = document.createDocumentFragment();
-    for (let letra of mensaje){
-        if (!letrasValidas.includes(letra)){
-            let p = document.createElement("p");
-            p.setAttribute("class", "error");
-            p.textContent = "Solo letras minúscumas y sin acentos";
-            mensajeError.appendChild(p);
-        }
+    
+    const textoConsonantesEncriptado = encriptarConsonantes(textoLimpio);
+    const resultado = encriptarTexto(textoConsonantesEncriptado);
+    document.getElementById("resultado").value = resultado;
+});
 
+// Evento de desencriptar
+document.getElementById("desencriptar").addEventListener("click", () => {
+    const mensaje = document.getElementById("mensaje").value.trim();
+    const textoLimpio = limpiarTexto(mensaje);
+
+    // Mensaje de advertencia
+    if (mensaje !== textoLimpio) {
+        alert("Solo letras minúsculas, sin acentos y sin caracteres especiales");
     }
-    tarjeta1.appendChild(mensajeError);
-    if (mensajeError.children.length === 0) {
-        return true;
-    }
-    return false;
-}
 
-function encriptar(){
-    if (!validarMensaje()) return;
-    let mensaje = inputMensaje.value;
-    let mensajeEncriptado = mensaje.replaceAll("e","enter").replaceAll("i","imes").replaceAll("a","ai").replaceAll("o","ober").replaceAll("u","ufat");
+    const textoPrimeraCapa = desencriptarTexto(textoLimpio);
+    const resultado = desencriptarConsonantes(textoPrimeraCapa);
+    document.getElementById("resultado").value = resultado;
+});
 
-    inputResultado.value = mensajeEncriptado;
-}
+// Evento de copiar
+document.getElementById("copiar").addEventListener("click", () => {
+    const resultado = document.getElementById("resultado").value;
+    copiarTexto(resultado);
+    document.getElementById("resultado").value = ""; // Borrar resultado después de copiar
+});
 
-function desencriptar(){
-    if (!validarMensaje()) return;
-    let mensajeEncriptado  = inputMensaje.value;
-    let mensaje  = mensajeEncriptado.replaceAll("enter","e").replaceAll("imes","i").replaceAll("ai","a").replaceAll("ober","o").replaceAll("ufat","u");
-
-    inputResultado.value = mensaje;
-}
-
-function copiar (){
-    let mensajeEncriptado = inputResultado.value;
-    navigator.clipboard.writeText(mensajeEncriptado);
-    inputMensaje.value = "";
-    inputMensaje.focus();
-}
-
-
-btnEncriptar.onclick = encriptar;
-
-btnDesencriptar.onclick = desencriptar;
-
-btnCopiar.onclick = copiar;
-
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('year').textContent = new Date().getFullYear();
+});
