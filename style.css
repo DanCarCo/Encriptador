@@ -6,6 +6,10 @@
 
 body {
     font-family: 'Seymour One', sans-serif;
+    background-image: url('Images/binario.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: black;
     color: white;
     display: flex;
@@ -135,3 +139,5 @@ footer {
         width: 90%;
     }
 }
+
+
