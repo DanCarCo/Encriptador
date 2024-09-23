@@ -14,11 +14,10 @@ body {
     justify-content: center;
     min-height: 100vh;
     position: relative;
-    overflow: hidden; /* Para evitar scrolls */
 }
 
 h1 {
-    margin-bottom: 1.25em; /* 20px */
+    margin-bottom: 1.25em;
 }
 
 main {
@@ -30,34 +29,34 @@ main {
 
 .ingreso-texto,
 .resultado-texto {
-    margin: 1.25em 0; /* 20px */
+    margin: 1.25em 0;
 }
 
 textarea {
-    width: 53em; /* 300px */
-    height: 20em; /* 100px */
-    margin: 0.3125em; /* 5px */
-    padding: 0.625em; /* 10px */
+    width: 17em;
+    height: 5em;
+    margin: 0.3125em;
+    padding: 0.625em;
     border: none;
-    border-radius: 0.3125em; /* 5px */
-    font-size: 1em; /* 16px */
+    border-radius: 0.3125em;
+    font-size: 3em;
     background-color: #222;
     color: #00ff00;
 }
 
 textarea:focus {
     outline: none;
-    border: 0.125em solid #00ff00; /* 2px */
+    border: 0.125em solid #00ff00;
 }
 
 button {
     background-color: #00ff00;
     color: black;
     border: none;
-    border-radius: 0.3125em; /* 5px */
-    padding: 0.625em 1.25em; /* 10px 20px */
-    margin: 0.3125em; /* 5px */
-    font-size: 1em; /* 16px */
+    border-radius: 0.3125em;
+    padding: 0.625em 1.25em;
+    margin: 0.3125em;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -67,62 +66,58 @@ button:hover {
 }
 
 footer {
-    margin-top: 1.25em; /* 20px */
+    margin-top: 1.25em;
     text-align: center;
 }
 
 #aviso {
     color: red;
-    margin-top: 0.625em; /* 10px */
+    margin-top: 0.625em;
 }
 
 .parrafo {
-    font-size: 0.7em; /* 14px */
-    margin-top: 0.3125em; /* 5px */
+    font-size: 0.7em;
+    margin-top: 0.3125em;
 }
 
-/* Estilos de los botones en la sección de ingreso-texto */
 .ingreso-texto {
     display: flex;
-    flex-direction: column; /* Para alinear el textarea y el párrafo en columna */
-    align-items: center; /* Centrar el contenido */
+    flex-direction: column;
+    align-items: center;
 }
 
 .ingreso-texto .botones {
-    display: flex; /* Flexbox para botones uno al lado del otro */
-    justify-content: space-between; /* Espaciado entre los botones */
-    width: 100%; /* Ancho total para los botones */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .ingreso-texto button {
-    flex: 1; /* Para que ambos botones ocupen el mismo espacio */
-    margin: 0.3125em; /* 5px */
+    flex: 1;
+    margin: 0.3125em;
 }
 
-/* Estilos de los botones en la sección de resultado-texto */
 .resultado-texto button {
-    display: block; /* Hace que el botón ocupe una línea completa */
-    width: 100%; /* Opcional: para que el botón sea del mismo ancho que el textarea */
-    margin-top: 0.625em; /* 10px */
+    display: block;
+    width: 100%;
+    margin-top: 0.625em;
 }
 
-/* Estilos para enlaces de redes sociales */
 .social-links {
-    margin-top: 1em; /* Espacio superior */
+    margin-top: 1em;
 }
 
 .social-links a {
-    margin: 0 0.3125em; /* 5px */
-    display: inline-block; /* Para que los enlaces se alineen correctamente */
+    margin: 0 0.3125em;
+    display: inline-block;
 }
 
 .social-icon {
-    width: 2em; /* Ancho del icono */
-    height: 2em; /* Altura del icono */
-    vertical-align: middle; /* Alineación vertical con el texto */
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
 }
 
-/* Responsividad */
 @media (min-width: 768px) {
     main {
         flex-direction: row;
@@ -140,8 +135,3 @@ footer {
         width: 90%;
     }
 }
-
-
-
-
-
