@@ -18,14 +18,6 @@ function encriptarTexto(texto) {
         .replace(/u/g, 'ufat');
 }
 
-// Función para aplicar la segunda capa de encriptación (consonantes)
-function encriptarConsonantes(texto) {
-    return texto.replace(/[b-df-hj-np-tv-z]/g, (c) => {
-        const charCode = c.charCodeAt(0);
-        return String.fromCharCode(charCode + 2);
-    });
-}
-
 // Función para desencriptar (primera capa)
 function desencriptarTexto(texto) {
     return texto
@@ -34,14 +26,6 @@ function desencriptarTexto(texto) {
         .replace(/ai/g, 'a')
         .replace(/ober/g, 'o')
         .replace(/ufat/g, 'u');
-}
-
-// Función para revertir la segunda capa de desencriptación
-function desencriptarConsonantes(texto) {
-    return texto.replace(/[d-fh-npr-xz]/g, (c) => {
-        const charCode = c.charCodeAt(0);
-        return String.fromCharCode(charCode - 2);
-    });
 }
 
 // Función para copiar al portapapeles
@@ -61,8 +45,7 @@ document.getElementById("encriptar").addEventListener("click", () => {
         alert("Solo letras minúsculas, sin acentos y sin caracteres especiales");
     }
     
-    const textoConsonantesEncriptado = encriptarConsonantes(textoLimpio);
-    const resultado = encriptarTexto(textoConsonantesEncriptado);
+    const resultado = encriptarTexto(textoLimpio);
     document.getElementById("resultado").value = resultado;
 });
 
@@ -76,8 +59,7 @@ document.getElementById("desencriptar").addEventListener("click", () => {
         alert("Solo letras minúsculas, sin acentos y sin caracteres especiales");
     }
 
-    const textoPrimeraCapa = desencriptarTexto(textoLimpio);
-    const resultado = desencriptarConsonantes(textoPrimeraCapa);
+    const resultado = desencriptarTexto(textoLimpio);
     document.getElementById("resultado").value = resultado;
 });
 
